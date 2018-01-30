@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>480</width>
+    <height>520</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Select COM Port</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>../timer.ico</normaloff>../timer.ico</iconset>
+  </property>
+  <property name="documentMode">
+   <bool>false</bool>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QStackedWidget" name="stack"/>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>480</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuTimer">
+    <property name="title">
+     <string>Device</string>
+    </property>
+    <addaction name="actionInfo"/>
+    <addaction name="actionStart_Timer"/>
+    <addaction name="actionStop_Timer"/>
+    <addaction name="separator"/>
+    <addaction name="actionManual"/>
+   </widget>
+   <widget class="QMenu" name="menuSystem">
+    <property name="title">
+     <string>System</string>
+    </property>
+    <addaction name="actionSet_Date"/>
+    <addaction name="actionSet_Info"/>
+   </widget>
+   <widget class="QMenu" name="menuSchedule">
+    <property name="title">
+     <string>Schedule</string>
+    </property>
+    <addaction name="actionNew"/>
+    <addaction name="actionSave"/>
+    <addaction name="actionLoad"/>
+    <addaction name="separator"/>
+    <addaction name="actionRead_from_Device"/>
+    <addaction name="actionWrite_to_Device"/>
+   </widget>
+   <addaction name="menuSchedule"/>
+   <addaction name="menuTimer"/>
+   <addaction name="menuSystem"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionInfo">
+   <property name="text">
+    <string>Info</string>
+   </property>
+   <property name="toolTip">
+    <string>Read information from the device</string>
+   </property>
+  </action>
+  <action name="actionStart_Timer">
+   <property name="text">
+    <string>Start Timer</string>
+   </property>
+   <property name="toolTip">
+    <string>Start the timer</string>
+   </property>
+  </action>
+  <action name="actionStop_Timer">
+   <property name="text">
+    <string>Stop Timer</string>
+   </property>
+   <property name="toolTip">
+    <string>Stop the timer</string>
+   </property>
+  </action>
+  <action name="actionSet_Date">
+   <property name="text">
+    <string>Set Device Date</string>
+   </property>
+   <property name="toolTip">
+    <string>Synchronize device date with the computer</string>
+   </property>
+  </action>
+  <action name="actionSet_Info">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Set Device Info</string>
+   </property>
+   <property name="toolTip">
+    <string>Write device info</string>
+   </property>
+  </action>
+  <action name="actionVerbose">
+   <property name="text">
+    <string>Verbose</string>
+   </property>
+  </action>
+  <action name="actionRead_from_Device">
+   <property name="text">
+    <string>Read from Device</string>
+   </property>
+   <property name="toolTip">
+    <string>Read actions from the device</string>
+   </property>
+  </action>
+  <action name="actionWrite_to_Device">
+   <property name="text">
+    <string>Write to Device</string>
+   </property>
+   <property name="toolTip">
+    <string>Write actions to the device</string>
+   </property>
+  </action>
+  <action name="actionSave">
+   <property name="text">
+    <string>Save</string>
+   </property>
+   <property name="toolTip">
+    <string>Save the current schedule</string>
+   </property>
+  </action>
+  <action name="actionLoad">
+   <property name="text">
+    <string>Load</string>
+   </property>
+   <property name="toolTip">
+    <string>Load a schedule</string>
+   </property>
+  </action>
+  <action name="actionNew">
+   <property name="text">
+    <string>New</string>
+   </property>
+   <property name="toolTip">
+    <string>Create a new schedule</string>
+   </property>
+  </action>
+  <action name="actionManual">
+   <property name="text">
+    <string>Manual</string>
+   </property>
+   <property name="toolTip">
+    <string>Manually operate a switch</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
