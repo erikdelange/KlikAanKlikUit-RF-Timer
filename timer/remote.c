@@ -3,7 +3,45 @@
  *	Transmit an RF command signal to a remote unit
  *
  *	The protocol used is the software implementation
- *	of the PT2262 Remote Control Encoder chip.
+ *	of the PT2262 Remote Control Encoder chip. The PT2262
+ *	transmits bits in multiples of a fixed period.
+ *
+ *		1 period (p) = 90 microseconds
+ *
+ *	A PT2262 input pin can be high, low or floating. Every
+ *	value can be transmitted.
+ *
+ *		Low		4pH, 12pL, 4pH, 12pL
+ *		High	12pH, 4pL, 12pH, 4pL
+ *		Float	4pH, 12pL, 12pH, 4pL
+ *
+ *	Every transmission is ended by a synchronisation-bit
+ *
+ *		Sync	4pH, 124pL
+ *
+ *	The PT2262 always send 12 bits. This is a code-word.
+ *
+ *		Code-word = 12 data bits + sync bit
+ *
+ *	There is no two-way communication so to make sure a
+ *	code-word arrives it is repeated a several times.
+ *	This is called a code-frame.
+ *
+ *		Code-frame = 4 timer a code-word
+ *
+ *	-- KlikAanKlikUit Protocol --
+ *
+ *	High is sent as a floating code-bit.
+ *	Low is sent a a low code-bit.
+ *
+ *	A code-word looks like this:
+ *
+ *		code bits 1 – 4		major unit id, 0 - 15
+ *		code bits 5 – 8		minor unit id, 0 - 15
+ *		code bit 9			fixed value : Low
+ *		code bit 10			fixed value : Float
+ *		code bit 11			fixed value : Float
+ *		code bit 12			on = Float, off = Low
  *
  *	2009	K.W.E. de Lange
  */
