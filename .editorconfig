@@ -1,0 +1,4 @@
+# see https://editorconfig.org/
+[*.{c,h,py}]
+indent_style = tab
+indent_size = 4
