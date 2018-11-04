@@ -73,7 +73,7 @@ typedef struct							// hardware info record layout
 
 HARDWARE hardware;						// hardware information
 
-int	maxActionIndex;						// the maximum number of actions which can be stored in EEPROM
+int maxActionIndex;						// the maximum number of actions which can be stored in EEPROM
 volatile boolean timerWakeup;			// flag indicating whether the timer must wake up
 volatile boolean timerEnable;			// flag to enable or disable the timer, regardless of wakeup
 volatile long disableTimeOut;			// counter to arrange automatic reset of timerEnable to TRUE
