@@ -189,8 +189,8 @@ void sendCodeBit(input_t bit)
  */
 void sendSyncBit()
 {
-		bitSet(RFPORT, (1<<RFBIT));
-		_delay_us(DELAY_MICROSECONDS);
-		bitClr(RFPORT, (1<<RFBIT));
-		_delay_us(DELAY_MICROSECONDS * 31);
+	bitSet(RFPORT, (1<<RFBIT));
+	_delay_us(DELAY_MICROSECONDS);
+	bitClr(RFPORT, (1<<RFBIT));
+	_delay_us(DELAY_MICROSECONDS * 31);
 }
