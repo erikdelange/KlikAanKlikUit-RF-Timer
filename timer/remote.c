@@ -19,7 +19,7 @@
  *
  *		Sync	4pH, 124pL
  *
- *	The PT2262 always send 12 bits. This is a code-word.
+ *	The PT2262 always sends 12 bits. This is a code-word.
  *
  *		Code-word = 12 data bits + sync bit
  *
@@ -36,8 +36,8 @@
  *
  *	A code-word looks like this:
  *
- *		code bits 1 – 4		major unit id, 0 - 15
- *		code bits 5 – 8		minor unit id, 0 - 15
+ *		code bits 1 â€“ 4		major unit id, 0 - 15
+ *		code bits 5 â€“ 8		minor unit id, 0 - 15
  *		code bit 9			fixed value : Low
  *		code bit 10			fixed value : Float
  *		code bit 11			fixed value : Float
